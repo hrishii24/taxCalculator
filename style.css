@@ -7,3 +7,17 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+#tip {
+  background-color: rgb(191, 210, 233);
+  height: 24px;
+  width: 24px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.btn {
+  width: 250px;
+  margin-left: 40%;
+}

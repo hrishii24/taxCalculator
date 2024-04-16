@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const overallIncome = totalIncome - tax;
-    modalHead.innerHTML = `Total tax is ${tax.toFixed(2)} for ${totalIncome}`;
+    modalHead.innerHTML = `Total tax is ₹ ${tax.toFixed(
+      2
+    )} for ₹ ${totalIncome}`;
     modalBody.innerHTML = `Overall income after tax deduction will be ${overallIncome.toFixed(
       2
     )} ₹`;

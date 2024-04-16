@@ -22,49 +22,46 @@
       <h1>Tax Calculator</h1>
       <form id="taxCalculatorForm">
         <div class="mb-3">
-          <label
-            for="grossIncome"
-            class="form-label"
-            data-bs-toggle="tooltip"
-            data-bs-placement="top"
-            title="Annual gross income"
-            >Enter annual gross income:</label
-          >
+          
+
+            <label for="grossIncome" class="form-label inline-block" title="Annual gross income">
+              Enter annual gross income: 
+              <p class="btn" id="tip"
+              data-bs-toggle="tooltip" data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Gross annual income is your total salary in a year before any deductions">
+              ?
+            </p>
+          </label>
+       
           <input type="number" class="form-control" id="grossIncome" required />
-          <i
-            class="fas fa-exclamation-circle error-icon"
-            id="grossIncomeErrorIcon"
-            data-bs-toggle="tooltip"
-            title=""
-            data-bs-placement="left"
-          ></i>
         </div>
         <div class="mb-3">
           <label
             for="extraIncome"
             class="form-label"
-            data-bs-toggle="tooltip"
-            data-bs-placement="top"
-            title="Extra income"
-            >Enter extra income:</label
-          >
+            >Enter extra income: 
+            <p class="btn" id="tip"
+              data-bs-toggle="tooltip" data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Extra income is your income from other sources such as side business">
+              ?
+            </p>
+            </label>
           <input type="number" class="form-control" id="extraIncome" required />
-          <i
-            class="fas fa-exclamation-circle error-icon"
-            id="extraIncomeErrorIcon"
-            data-bs-toggle="tooltip"
-            title=""
-            data-bs-placement="left"
-          ></i>
+          </i>
         </div>
         <div class="mb-3">
           <label
             for="ageGroup"
             class="form-label"
-            data-bs-toggle="tooltip"
-            data-bs-placement="top"
             title="Age group"
-            >Enter age group:</label
+            >Enter age group: <p class="btn" id="tip"
+            data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Please enter the correct age group because tax varies based on your age">
+            ?
+          </p></label
           >
           <select class="form-select" id="ageGroup" required>
             <option value="under40">Under 40</option>
@@ -76,19 +73,15 @@
           <label
             for="deductions"
             class="form-label"
-            data-bs-toggle="tooltip"
-            data-bs-placement="top"
-            title="Total applicable deductions"
-            >Enter total applicable deductions:</label
+            >Enter total applicable deductions: <p class="btn" id="tip"
+            data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="The deductions that you made from salary.">
+            ?
+          </p>
+          </label
           >
           <input type="number" class="form-control" id="deductions" required />
-          <i
-            class="fas fa-exclamation-circle error-icon"
-            id="deductionsErrorIcon"
-            data-bs-toggle="tooltip"
-            title=""
-            data-bs-placement="left"
-          ></i>
         </div>
         <button
           type="submit"
@@ -152,5 +145,8 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
-  </body>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    </script>
 </html>
