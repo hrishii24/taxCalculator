@@ -17,6 +17,10 @@ input[type="number"] {
   border-radius: 50%;
 }
 
+#tip:hover {
+  background-color: rgb(94, 139, 190);
+}
+
 .btn {
   width: 250px;
   margin-left: 40%;
